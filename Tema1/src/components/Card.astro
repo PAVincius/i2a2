@@ -1,0 +1,21 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	price: string;
+}
+
+const { price, title, body } = Astro.props;
+---
+<ul class="mb-8 w-1/2">
+  <div class="flex bg-white items-center rounded-xl w-full h-16 shadow-lg p-2">
+    <div class="w-8 h-8 overflow-hidden rounded-xl">
+      <img class="w-8 h-8 rounded-xl hover:scale-110 duration-150" src="../src/images/sushi.png" alt="Produto 1">
+    </div>
+    <div class="ml-2 w-full">
+      <p class="font-bold text-md mb-1">{title}</p>
+      <p class="text-gray-600 text-sm">Price: R${price}</p>
+      <p class="text-gray-600 text-sm">Description: {body}</p>
+    </div>
+  </div>
+</ul>
